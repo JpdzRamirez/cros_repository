@@ -1,0 +1,228 @@
+@use "../utils" as *;
+
+.welcome-menu {
+  background: #383838;
+  color: #00dd00;
+  .typing {
+    animation: type 3.5s steps(60, end) backwards;
+    margin: 1px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+    @for $i from 1 to 14 {
+        &:nth-child(#{$i}) { animation-delay: $i * 3.5s; }
+      }
+}
+.text-shadow{
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+  .overlay {
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+  }
+
+  .overlay:before {
+    background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.03),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.03)
+      );
+    background-size: 100% 2px, 6px 100%;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .overlay:after {
+    animation: flicker 0.3s infinite;
+    background: rgba(16, 16, 16, 0.2);
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .scanline {
+    animation: scroll 10s 2s infinite;
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 221, 0, 0) 0%,
+      rgba(0, 221, 0, 1) 50%,
+      rgba(0, 221, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 221, 0, 0) 0%,
+      rgba(0, 221, 0, 1) 50%,
+      rgba(0, 221, 0, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 221, 0, 0) 0%,
+      rgba(0, 221, 0, 1) 50%,
+      rgba(0, 221, 0, 0) 100%
+    );
+    display: block;
+    height: 20px;
+    opacity: 0.06;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0%;
+    z-index: 2;
+  }
+
+  .wrapper {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    scrollbar-width: none;
+    
+    width: 80%;
+    height: 90%;
+    .content {
+      
+      overflow: hidden;
+      padding: 40px;
+      position: relative;
+      width: 95%;
+
+      overflow: hidden !important;
+      zoom: 1;
+      header.site.clearfix {
+        
+        margin: 0 0 40px 0;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        .col.one {
+            position: relative;
+            overflow: hidden;
+            height: 7.5em;
+            width: 7.5em;
+          #logo-v {
+            animation: slideDown 2s linear both;
+            top: -88%;
+            position: absolute;
+            height: auto;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .col.two {
+            width: auto;
+            position: relative;
+            font-size: 18px;
+            animation: text-flicker-in-glow 4s linear both;
+          span {
+            position: relative;
+            font-weight: normal;
+            margin: 0;
+            text-transform: uppercase;
+            b {
+              color: white;
+            }
+          }
+          p {
+            line-height: 100%;
+            margin: 0;
+          }
+        }
+      }
+
+    }
+  }
+
+  .main {
+    .main-text {
+        width: 100%;
+        height: 67%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        p{
+            margin:0;
+            b {
+                color: white;
+              }
+        }
+    }
+    .main-menu {
+      .site {
+        margin: 0 0 40px 0;
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        &.clear {
+          clear: both;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            display: inline-block;
+            padding: 0 10px;
+            min-width: 250px;
+            width: auto;
+            a,i {
+              color: white;
+              text-decoration: none;
+            }
+            i{
+                display: none ;
+            }
+            a:hover {
+              color: red;
+            }
+
+            a:before,
+            p a:before {
+              color: #00dd00;
+              content: " [ ";
+            }
+            a:after,
+            p a:after {
+              color: #00dd00;
+              content: " ] ";
+            }
+          }
+          &>li:hover{
+                i{
+                    transition: 0.2s ease-in-out;
+                    display: contents;
+                    position: absolute;
+                    top: 1.5rem;
+                    left: 8rem;
+                  }
+          }
+        }
+      }
+    }
+  }
+  .contact-gratitude{
+    display: flex;
+    position: absolute;
+    bottom: 1em;
+  }
+}

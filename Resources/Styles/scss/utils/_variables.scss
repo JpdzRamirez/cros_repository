@@ -1,0 +1,26 @@
+$azul:#2B72B3;
+$azul-claro:#00a2ff7e;
+$negro:#282C34;
+$negro-claro:#303030;
+$verde:#7ED957;
+$naranja:#FF914D;
+$amarillo-oscuro:#F9C500;
+$blanco:#FFFFFF;
+$beige:#999999;
+$gris:#6d6d6d;
+$transparente:#00000000;
+
+$text:#fffa09;
+$Terminal:#80ff80cc;
+$TerminalSombra:rgba(51, 255, 51, 0.4);
+
+$white: #ffffff;
+$black: #000000;
+$primary1: #004445;
+$primary2: #2c7873;
+$textCol: #1f1f1f;
+
+@mixin main-font {
+    font-family: Ubuntu-Medium;
+  }
+

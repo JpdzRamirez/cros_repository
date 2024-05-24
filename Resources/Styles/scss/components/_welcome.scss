@@ -1,0 +1,138 @@
+@use "../utils"  as *;
+
+
+button{
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto !important;
+}
+body{
+    .hidden{
+        display: none !important;
+    }
+    .welcome-menu{ 
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-family: "Pixelify Sans", sans-serif;
+        line-height: 2;
+        height: 100vh;
+        background-color: #221;
+        text-transform: uppercase;    
+
+    }
+    .welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: space-evenly;
+    .welcome-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+        top:10%;
+        .welcome-microsoft-container{
+            position: relative;
+            display: flex;
+            gap: 1em;
+            flex-direction: row;
+            right: 1em;
+            align-items: flex-end;
+            .welcome-microsoft-text{
+                display: block;
+                font-weight:100;
+                font-size: 2em;
+                font-family: system-ui;
+                i{
+                    position: relative;
+                    font-size: 8px;
+                    top: -2em;
+                    right: 1em;
+                }
+            }
+            .welcome-microsoft-flag{
+                img{
+                    width: 10em;
+
+                }
+                i{
+                    position: absolute;
+                    top: 80%;
+                    right: 2px;
+                }
+            }
+
+        }
+
+        .welcome-windows-container{
+            margin-top: -17px;
+            .welcome-windows-text{
+                font-size: 4em;
+                font-weight: bold;
+                margin-right: 1em;
+                i{
+                    position: absolute;
+                    top: 10em;
+                    right: 55px;
+                    font-size: 15px;
+                }
+
+            }
+            .welcome-windows-xp{
+                color: #F4792F;
+                font-size: 3em;
+                position: absolute;
+                font-weight: bold;
+                top: 8rem;
+                right: 0em;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+        }
+        .welcome-profesional{
+            font-size: 2.5em;
+            right: 3.4rem;
+            position: relative;
+            margin-top: -17px;
+        }
+    }
+    }
+    .welcome-footer{
+        position: relative;
+        top: 25%;
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+        img{
+            width: 10em;
+        }
+    }
+    .welcome-loading{
+            width: 150px;
+            height: 10px;
+            border: 2px solid #b2b2b2;
+            border-radius: 7px;
+            margin: 0 auto;
+            padding: 2px 1px;
+            overflow: hidden;
+            font-size: 0;
+            position: relative;
+            top: 10%;
+          .box{
+            width: 9px;
+            height: 100%;
+            background: linear-gradient(to bottom, #2838c7 0%,#5979ef 17%,#869ef3 32%,#869ef3 45%,#5979ef 59%,#2838c7 100%);
+            display: inline-block;
+            margin-right: 2px;
+            animation: loader 2s infinite;
+            animation-timing-function: linear;
+          }
+    }
+
+    
+
+}

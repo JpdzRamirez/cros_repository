@@ -1,1 +1,114 @@
-<h1>GET</h1>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" initial-scale="1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/Resources/Styles/css/welcome.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="welcome-menu">
+      <div class="overlay"></div>
+      <div class="scanline"></div>
+      <div class="wrapper">
+        <div class="content">
+          <header class="site clearfix">
+            <div class="col one">
+              <img
+                src="https://assets.codepen.io/2856/Logo_591Design_2015-12-01.png"
+                alt="591 Systems"
+                id="logo-v"
+              />
+            </div>
+            <div class="col two">
+              <span>
+                591 Systems (tm) <br />
+                <b>H</b>euristically <b>E</b>ncrypted <b>R</b>ealtime
+                <b>O</b>perating <b>S</b>ystem (HEROS)
+              </span>
+              <p>----------------------------------------</p>
+              <p>HEROS v 1.0.0</p>
+              <p>(c)2022 591 Industries</p>
+              <p>- Server 591 -</p>
+            </div>
+          </header>
+          <div class="main">
+            <div class="main-text">
+              <p class="typing">=>$: System Administrator Integrated Message System (SAIMS)</p>
+              <p class="typing">=>$: System Administrator (SYSADM) - <b>Jeremy Ivan Pedraza Hernández</b></p>
+              <p class="typing">=>$: 
+                Bienvenidos a la terminal de contacto de JpdzSoftware.
+                Responderemos sus inquietudes en la mayor brevedad posible.
+              </p>
+              <p class="typing">=>$:Por favor seleccione una de las  <b>siguientes opciones:</b></p>
+            </div>
+            <div class="main-menu" hidden>
+              <nav class="site clear">
+                <ul>
+                  <li class="text-shadow"><i class="fa-solid fa-right-long"></i><a onclick="clickTradicional()" title="current_hv">Hoja de vida para empresas tradicionales.</a></a></li>
+                  <li class="text-shadow"><i class="fa-solid fa-right-long"></i><a onclick="clickModerno()" title="developer_hv">Hoja de vida para empresas modernas.</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="contact-gratitude" hidden> Thank you for contacting the System Administrator's Office.</span>
+    </div>
+
+    <div class="welcome hidden">
+      <div class="welcome-main">
+        <div class="welcome-microsoft-container">
+          <div class="welcome-microsoft-text">
+            Microsoft <i class="fa-regular fa-registered"></i>
+          </div>
+          <div class="welcome-microsoft-flag">
+            <img
+              src="Resources/img/Microsoft-Windows-XP-Flag-Logo.png"
+              alt="welcome-microsoft-flag"
+            />
+            <i class="fa-solid fa-trademark"></i>
+          </div>
+        </div>
+
+        <div class="welcome-windows-container">
+          <div class="welcome-windows-text">
+            Windows
+            <i class="fa-regular fa-registered"></i>
+          </div>
+          <span class="welcome-windows-xp">XP</span>
+        </div>
+        <span class="welcome-profesional">Professional</span>
+        <div class="welcome-loading">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="welcome-footer">
+        <span class="welcome-footer-copyright"
+          >Copyright <i class="fa-regular fa-registered"></i> Microsoft
+          Corporation</span
+        >
+        <img
+          src="Resources/img/logo-microsoft-footer.PNG"
+          alt="welcome-microsoft-flag"
+        />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Resources/Scripts/main.js"></script>
+  </body>
+</html>

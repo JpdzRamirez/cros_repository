@@ -1,0 +1,18 @@
+@use "../utils"  as *;
+html{
+    box-sizing: border-box;
+    width: 100vw !important;
+    padding:0;
+    scroll-behavior: smooth;
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), default !important;
+}
+body{  
+    color: $negro;
+    background-color: $negro;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+    background-image: url(/Resources/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
