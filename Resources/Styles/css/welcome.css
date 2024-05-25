@@ -36,6 +36,18 @@
     top: 0; /* Posición final */
   }
 }
+@keyframes slide-out-fwd-center {
+  0% {
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
 @keyframes scroll {
   0% {
     height: 0;
@@ -265,6 +277,9 @@ button {
   cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto !important;
 }
 
+body .exitLoading {
+  animation: slide-out-fwd-center 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
 body .hidden {
   display: none !important;
 }
@@ -434,6 +449,9 @@ body .welcome-loading .box {
 .welcome-menu .typing:nth-child(13) {
   animation-delay: 45.5s;
 }
+.welcome-menu .shadow-animation {
+  animation: text-flicker-in-glow 4s linear;
+}
 .welcome-menu .text-shadow {
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
 }
@@ -445,8 +463,8 @@ body .welcome-loading .box {
   width: 1px;
 }
 .welcome-menu .overlay:before {
-  background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
-  background-size: 100% 2px, 6px 100%;
+  background: linear-gradient(rgba(16, 16, 16, 0.4509803922) 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
   content: "";
   display: block;
   pointer-events: none;
@@ -472,6 +490,8 @@ body .welcome-loading .box {
 }
 .welcome-menu .scanline {
   animation: scroll 10s 2s infinite;
+  background: -moz-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgb(0, 221, 0) 50%, rgba(0, 221, 0, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgb(0, 221, 0) 50%, rgba(0, 221, 0, 0) 100%);
   background: linear-gradient(to bottom, rgba(0, 221, 0, 0) 0%, rgb(0, 221, 0) 50%, rgba(0, 221, 0, 0) 100%);
   display: block;
   height: 20px;

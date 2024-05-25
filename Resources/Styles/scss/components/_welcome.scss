@@ -5,6 +5,9 @@ button{
     cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto !important;
 }
 body{
+    .exitLoading{
+        animation: slide-out-fwd-center 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      }
     .hidden{
         display: none !important;
     }
